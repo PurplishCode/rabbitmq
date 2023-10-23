@@ -1,0 +1,14 @@
+RabbitMQ is a message-broker. It accepts and forwarded messages. Imagine it as post-office. Once you deliver any mail into the post-box, it'll for sure be forwarded for the receipient.
+It acts like an asynchronous processing, in this analogy, RabbitMQ is the Post-office, post-box and letter-carrier.
+But instead of receiving, forwarding, and storing mails. RabbitMQ has sort-of binary blob of data, called messages.
+
+Here are few key-roles of RabbitMQ process.
+
+[ Producer: It's nothing more than sending. A program that sends message, is called Producer.]
+
+[ Queue: This is the Post-office for RabbitMQ. Although messages flow through your applications and RabbitMQ, they're stored within a queue. 
+A queue is only bound by the host's memory & disk limits, it's essentially a large message buffer. Many producers can send messages that go to one queue, and many consumers can try to receive data from one queue. This is how we represent a queue]
+
+[ Consumer: Consuming has a similarity of receiving. A program that consumes message, is called Consumer. ]
+
+# Extra Note that the producer, consumer, and broker do not have to reside on the same host; indeed in most applications they don't. An application can be both a producer and consumer, too.
